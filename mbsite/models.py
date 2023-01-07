@@ -17,5 +17,19 @@ class About(models.Model):
     description_icon=models.CharField(max_length=400)
 
 
+SKILL_TYPE=(
+    ('HTML','HTML'),
+    ('CSS','CSS'),
+    ('JAVASCRIPT','JAVASCRIPT'),
+    ('PYTHON', 'PYTHON'),
+    ('DJANGO','DJANGO')
+
+)    
+
+class Skills(models.Model):
+    skill_description=models.CharField(max_length=500)
+    percentage=models.IntegerField()
+    typ=models.CharField(max_length=20, choices=SKILL_TYPE)
+
 
     
