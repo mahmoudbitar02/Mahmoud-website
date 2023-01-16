@@ -17,9 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
+from mbsite.models import About, Skills
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', About),
+    path('Skills/', Skills)
 ]
 
 
