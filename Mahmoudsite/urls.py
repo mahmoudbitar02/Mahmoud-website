@@ -18,10 +18,11 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from mbsite.models import About, Skills
+from mbsite.views import home
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', About),
+    path('', home),
     path('Skills/', Skills)
 ]
 
