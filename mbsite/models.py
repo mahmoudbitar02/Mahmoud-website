@@ -5,7 +5,9 @@ from django.db import models
 
 class Mysilf(models.Model):
     name = models.CharField(max_length=25)
-    age = models.CharField(max_length=50)
+    job = models.CharField(max_length=50)
+    def __str__(self):
+        return self.name
 
 
 class About(models.Model):
@@ -67,6 +69,19 @@ class Services(models.Model):
 
     def __str__(self):
         return self.speech
+
+CATIGORY_TYPE=(
+    ('all','all'),
+    ('app','app'),
+    ('card','card'),
+    ('web','web')
+)
+
+class Portfolio(models.Model):
+    speech=models.CharField(max_length=2000)
+    catigory=models.CharField(max_length=20)
+    type=models.CharField(max_length=15, choices=CATIGORY_TYPE)
+    image=models.ImageField(upload_to='service/')
 
 
     
