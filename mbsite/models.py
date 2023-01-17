@@ -18,7 +18,7 @@ class About(models.Model):
     number=models.IntegerField()
     description_icon=models.CharField(max_length=400)
     def __str__(self):
-        return self. description
+        return self.headding
 
 
 SKILL_TYPE=(
