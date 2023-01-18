@@ -63,6 +63,10 @@ class Education(models.Model):
     year=models.IntegerField()
     subtitle=models.CharField(max_length=200)
     subtitle2=models.CharField(max_length=1000)
+    point1=models.CharField(max_length=100)
+    point2=models.CharField(max_length=500)
+    point3=models.CharField(max_length=50)
+    point4=models.CharField(max_length=50)
     def __str__(self):
         return self.title
 
