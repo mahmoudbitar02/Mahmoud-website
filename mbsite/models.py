@@ -70,6 +70,17 @@ class Education(models.Model):
     def __str__(self):
         return self.title
 
+class Graphic(models.Model):
+    title=models.CharField(max_length=100)
+    year=models.CharField(max_length=20)
+    subtitle=models.CharField(max_length=100)
+    point1=models.CharField(max_length=100)
+    point2=models.CharField(max_length=100)
+    point3=models.CharField(max_length=100)
+    point4=models.CharField(max_length=100)
+    def __str__(self):
+        return self.title
+
 
 class Services(models.Model):
     speech=models.CharField(max_length=2000)

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-from .models import Mysilf, About, Skills, Sumary, Education, Experience
+from .models import Mysilf, About, Skills, Sumary, Education, Experience, Graphic, Services
 
 def home(request):
     mysilf=Mysilf.objects.last()
@@ -14,6 +14,8 @@ def home(request):
     sumary=Sumary.objects.last()
     education=Education.objects.last()
     experience=Experience.objects.last()
+    graphic=Graphic.objects.last()
+    service=Services.objects.last()
 
     return render(request, 'index.html',{
 
@@ -27,6 +29,8 @@ def home(request):
     'sumary':sumary,
     'education':education,
     'experience':experience,
+    'graphic':graphic,
+    'service':service,
 
 
     })
