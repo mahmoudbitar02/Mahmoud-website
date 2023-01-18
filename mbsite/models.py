@@ -41,6 +41,8 @@ class Sumary(models.Model):
     title=models.CharField(max_length=20)
     subtitle=models.CharField(max_length=1000)
     point=models.CharField(max_length=75)
+    point2=models.CharField(max_length=100)
+    point3=models.CharField(max_length=100)
     def __str__(self):
         return self.title
 
@@ -49,6 +51,10 @@ class Experience(models.Model):
     year=models.IntegerField()
     title2=models.CharField(max_length=100)
     point=models.CharField(max_length=500)
+    point1=models.CharField(max_length=100)
+    point2=models.CharField(max_length=500)
+    point3=models.CharField(max_length=50)
+    point4=models.CharField(max_length=50)
     def __str__(self):
         return self.title
 
