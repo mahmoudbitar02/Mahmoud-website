@@ -96,6 +96,7 @@ CATIGORY_TYPE=(
     ('app','app'),
     ('card','card'),
     ('web','web')
+     
 )
 
 class Portfolio(models.Model):
